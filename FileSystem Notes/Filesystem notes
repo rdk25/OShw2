@@ -1,0 +1,25 @@
+
+bd = BlockDevice("mydev",blockCount=1024,create=True)
+
+mydev.1024.dev 
+
+bd.close()
+
+@staticmethod
+def mount(blockfilename...)
+	ret = FileSystem(bd,...)
+	.
+	.
+	.
+	return ret
+
+To Do:
+- test cat command
+- FileSystem class object code (static method) #1
+- add newfs to Shell
+add mount to Shell
+- make alloc_block (find open block, fill, return number used)
+- make blockmap (binary in blockDevide and boolean array in Python)
+- make inode_map
+- make alloc_inode
+- make master block #2
