@@ -16,4 +16,29 @@ def createFileSystem(filename,block_count,magicNumber,blocksize=1024,inode_count
 	packed_buff2 = numpy.packbits(buff2)
 	print(packed_buff2)
 	blockdevice.write_block(1,packed_buff2)
+	buff3 = [0]*inode_count
+	packed_buff3 = numpy.packbits(buff3)
+	print(packed_buff3)
+	blockdevice.write_block(1,packed_buff3)
+
+	blockMap = ([True]*3)+([False]*100)
+
+class BlockMap:
+
+	def __init__(self):
+
+	def alloc_block(self):
+
+
+	def free_block(self,num):
+
+
+
+class iNode:
+
+	def alloc_inode(type):
+
+
+	def free_inode(num):
+
 	
