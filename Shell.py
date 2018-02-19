@@ -14,6 +14,41 @@ def repl():
         words = line.split()
         if len(words) == 0:
             pass
+        elif words[0] == newfs:
+            if words[3] == None:
+                FS = FileSystem.createFileSystem(words[1],words[2])
+            else:
+                FS = FileSystem.createFileSystem(words[1],words[2])
+            Blockdevice.close() #IDK IF THIS IS RIGHT - ASK DYLAN??????????????????????????
+            
+        elif words[0] == mount:
+        
+        elif words[0] == blockmap:
+            i = 0
+                map = ""
+                for block in BLOCKMAP??????????????????????????????
+                    if i == 64:
+                        print(map)
+                        map = ""
+                    if i%7 == 0:
+                        map = map + "|"
+                    map = map + str(block)
+                    i += 1
+                print(map)                          
+            
+        elif words[0] == alloc_block:
+            BlockMap.alloc_block(blockdevice)?????????????????????
+        
+        elif words[0] == free_block:
+            
+        elif words[0] == inode_map:
+            for inode in
+            
+        elif words[0] == alloc_inode:
+        
+        elif words[0] == free_inode:
+            
+            
         elif words[0] in ('exit', 'quit'):
             break
         elif words[0] in ('ls', 'dir'):
