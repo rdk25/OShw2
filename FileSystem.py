@@ -13,7 +13,7 @@ def createFileSystem(filename,block_count,magicNumber,blocksize=1024,inode_count
 	ba = bytearray(packed_buff)
 	print(packed_buff)
 	blockdevice.write_block(0,ba)
-	buff2 = ([True,True]+[False,False,False,False,False,False,|]+[False,False,False,False,False,False,False,False,|]*(block_count/8-8))[:-1] #added silly workaround to not print | at end of map
+	buff2 = ([True,True]+[False]*(block_count-2)) 
 	packed_buff2 = numpy.packbits(buff2)
 	ba2 = bytearray(packed_buff2)
 	print(packed_buff2)
